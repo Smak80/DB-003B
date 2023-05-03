@@ -46,7 +46,7 @@ public class DbHelper{
         st.executeUpdate();
     }
 
-    public ArrayList<Customer> getCustomers() throws SQLException {
+    public ArrayList<Customer> getCustomers() throws Exception {
         var customers = new ArrayList<Customer>();
         var sql = "SELECT * FROM `customers`";
         var st = conn.createStatement();
@@ -61,7 +61,7 @@ public class DbHelper{
         return customers;
     }
 
-    public Customer getCustomerByPhone(long phone) throws SQLException {
+    public Customer getCustomerByPhone(long phone) throws Exception {
         Customer c = new Customer();
         var sql = "SELECT * FROM `customers` WHERE phone=?";
         var st = conn.prepareStatement(sql);

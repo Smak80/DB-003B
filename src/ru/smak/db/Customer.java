@@ -12,7 +12,9 @@ public class Customer {
         return phone;
     }
 
-    public void setPhone(long phone) {
+    public void setPhone(long phone) throws Exception {
+        if (phone < 9000000000L || phone > 9999999999L)
+            throw new Exception("Неверный номер телефона");
         this.phone = phone;
     }
 

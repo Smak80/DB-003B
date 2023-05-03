@@ -14,7 +14,7 @@ public class Main {
         try {
             c1.setPhone(9271110500L);
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            System.out.println(e.getMessage());
         }
         c1.setName("Иванов И. И.");
         c1.setPassword("123456");
@@ -23,7 +23,7 @@ public class Main {
         try {
             c2.setPhone(9171110890L);
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            System.out.println(e.getMessage());
         }
         c2.setName("Петров П. П.");
         c2.setPassword("12345678");

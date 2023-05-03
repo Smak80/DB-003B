@@ -24,7 +24,7 @@ public class Main {
         try {
             var dbh = new DbHelper("localhost", 3306, "root", "");
             dbh.createDb();
-            dbh.createUsersTable();
+            dbh.createCustomersTable();
             dbh.clearAll();
             for (var c : customers){
                 dbh.addCustomer(c);

@@ -27,7 +27,7 @@ public class DbHelper{
         st.executeBatch();
     }
 
-    public void createUsersTable() throws SQLException {
+    public void createCustomersTable() throws SQLException {
         var sql = "CREATE TABLE IF NOT EXISTS `customers`(" +
                 "phone bigint not null primary key," +
                 "name varchar(200) not null," +
